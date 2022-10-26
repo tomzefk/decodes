@@ -1,2 +1,14 @@
 @use './styles/colors.scss';
 @use './styles/types.scss';
+
+$breakpoint-tablet: 768px;
+
+div.App {
+    display: grid;
+    place-items: center;
+
+    max-width: 100vw;
+    min-height: 100vh;
+    padding: 64px 2.5vw;
+    background-color: colors.$snow;
+}

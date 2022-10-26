@@ -1,0 +1,165 @@
+@use '../../../../App.scss';
+@use '../../../../styles/colors.scss';
+@use '../../../../styles/types.scss';
+
+div.container {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    width: 100%;
+    padding: 20px 18px;
+    border-radius: 8px;
+
+    &.unread {
+        background-color: colors.$snow;
+
+        div.content {
+            div.titleWrapper {
+                p.title {
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        margin-top: 8px;
+                        margin-left: 8px;
+
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 100%;
+
+                        background-color: colors.$red;
+                    }
+                }
+            }
+        }
+    }
+
+    img.avatar {
+        width: 45px;
+        height: 45px;
+
+        border-radius: 100%;
+        border: 1px solid #00000011;
+    }
+
+    div.content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        &.alt {
+            flex-direction: column;
+        }
+
+        div.titleWrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+
+            p.title {
+                margin: 0;
+
+                @media (max-width: App.$breakpoint-tablet) {
+                    font: types.$min-body;
+                }
+
+                font: types.$body;
+                color: colors.$grey_blue-700;
+
+                span.userName {
+                    @media (max-width: App.$breakpoint-tablet) {
+                        font: types.$min-body-bold;
+                    }
+
+                    font: types.$body-bold;
+                    color: colors.$grey_blue-900;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: colors.$blue;
+                    }
+                }
+
+                span {
+
+                    &.state {
+                        @media (max-width: App.$breakpoint-tablet) {
+                            font: types.$min-body-bold;
+                        }
+
+                        font: types.$body-bold;
+                    }
+
+                    &.reactedPost {
+                        color: colors.$grey_blue-700;
+
+                        &:hover {
+                            cursor: pointer;
+                            color: colors.$blue;
+                        }
+                    }
+
+                    &.joinedGroup {
+                        color: colors.$blue;
+
+                        &:hover {
+                            cursor: pointer;
+                            color: colors.$blue;
+                        }
+                    }
+
+                    &.leftGroup {
+                        color: colors.$blue;
+
+                        &:hover {
+                            cursor: pointer;
+                            color: colors.$blue;
+                        }
+                    }
+                }
+            }
+
+            span.time {
+                @media (max-width: App.$breakpoint-tablet) {
+                    font: types.$min-body;
+                }
+
+                font: types.$body;
+                color: colors.$grey_blue-500;
+            }
+        }
+
+        span.state {
+            &.sentMessage {
+                width: 100%;
+
+                margin-top: 12px;
+                padding: 20px;
+
+                border-radius: 6px;
+                border: 1px solid colors.$grey_blue-100;
+
+                @media (max-width: App.$breakpoint-tablet) {
+                    font: types.$min-body;
+                }
+
+                font: types.$body;
+                color: colors.$grey_blue-700;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: colors.$grey_blue-300;
+                }
+            }
+
+            &.commentedPicture {
+                img {
+                    width: 45px;
+                    height: 45px;
+                }
+            }
+        }
+    }
+
+
+}
