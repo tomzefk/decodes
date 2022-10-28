@@ -1,0 +1,14 @@
+// Text styles
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+    font-weight: 400 700 800;
+}
+
+$heading-xl: 900 56px 'Inter', sans-serif;
+$heading-l: 700 40px 'Inter', sans-serif;
+$heading-m: 700 32px 'Inter', sans-serif;
+$heading-s: 900 20px/24px 'Inter', sans-serif;
+$heading-xs: 900 16px/24px 'Inter', sans-serif;
+$body: 400 15px/26px 'Inter', sans-serif;
